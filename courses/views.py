@@ -7,12 +7,12 @@ from django.shortcuts import redirect, get_object_or_404
 from django.views.generic.base import TemplateResponseMixin, View
 from django.forms.models import modelform_factory
 from django.apps import apps
-from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 from django.db.models import Count
+from django.core.cache import cache
+from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 from .models import Subject, Course, Module, Content
 from .forms import ModuleFormSet
 from students.forms import CourseEnrollForm
-from django.core.cache import cache
 
 
 class OwnerMixin(object):
