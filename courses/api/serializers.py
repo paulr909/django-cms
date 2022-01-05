@@ -1,18 +1,18 @@
 from rest_framework import serializers
-from ..models import Subject, Course, Module
-from ..models import Content
+
+from ..models import Content, Course, Module, Subject
 
 
 class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
-        fields = ['id', 'title', 'slug']
+        fields = ["id", "title", "slug"]
 
 
 class ModuleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Module
-        fields = ['order', 'title', 'description']
+        fields = ["order", "title", "description"]
 
 
 class CourseSerializer(serializers.ModelSerializer):
@@ -20,7 +20,16 @@ class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = ['id', 'subject', 'title', 'slug', 'overview', 'created', 'owner', 'modules']
+        fields = [
+            "id",
+            "subject",
+            "title",
+            "slug",
+            "overview",
+            "created",
+            "owner",
+            "modules",
+        ]
 
 
 class ItemRelatedField(serializers.RelatedField):
@@ -33,7 +42,7 @@ class ContentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Content
-        fields = ['order', 'item']
+        fields = ["order", "item"]
 
 
 class ModuleWithContentsSerializer(serializers.ModelSerializer):
@@ -41,7 +50,7 @@ class ModuleWithContentsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Module
-        fields = ['order', 'title', 'description', 'contents']
+        fields = ["order", "title", "description", "contents"]
 
 
 class CourseWithContentsSerializer(serializers.ModelSerializer):
@@ -49,4 +58,13 @@ class CourseWithContentsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = ['id', 'subject', 'title', 'slug', 'overview', 'created', 'owner', 'modules']
+        fields = [
+            "id",
+            "subject",
+            "title",
+            "slug",
+            "overview",
+            "created",
+            "owner",
+            "modules",
+        ]
