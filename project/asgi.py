@@ -1,5 +1,5 @@
 """
-ASGI config for django_v4 project.
+ASGI config for django-cms project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

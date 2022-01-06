@@ -1,5 +1,5 @@
 """
-WSGI config for django_v4 project.
+WSGI config for django-cms project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
