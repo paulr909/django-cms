@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "memcache_status",
     "rest_framework",
     "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -113,4 +114,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
