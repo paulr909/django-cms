@@ -1,8 +1,9 @@
-import os
-
 from django.urls import reverse_lazy
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "ybx5d+youn7^%kho86%+%fenz8!&=jpwe%z7_@ygj7l9nskk*l"
 
@@ -43,7 +44,7 @@ ROOT_URLCONF = "project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "courses/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -61,7 +62,7 @@ WSGI_APPLICATION = "project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -95,7 +96,7 @@ STATIC_URL = "/static/"
 LOGIN_REDIRECT_URL = reverse_lazy("student_course_list")
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_ROOT = BASE_DIR / "media/"
 
 # CACHES = {
 #     'default': {
@@ -117,3 +118,5 @@ REST_FRAMEWORK = {
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

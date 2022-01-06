@@ -1,6 +1,6 @@
 from rest_framework import generics, viewsets
 from rest_framework.authentication import BasicAuthentication
-from rest_framework.decorators import detail_route
+from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
@@ -27,7 +27,8 @@ class CourseViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
-    @detail_route(
+    @action(
+        detail=True,
         methods=["post"],
         authentication_classes=[BasicAuthentication],
         permission_classes=[IsAuthenticated],
@@ -37,7 +38,8 @@ class CourseViewSet(viewsets.ReadOnlyModelViewSet):
         course.students.add(request.user)
         return Response({"enrolled": True})
 
-    @detail_route(
+    @action(
+        detail=True,
         methods=["get"],
         serializer_class=CourseWithContentsSerializer,
         authentication_classes=[BasicAuthentication],
