@@ -26,3 +26,6 @@ memcached -l 127.0.0.1:11211
 ```
 
 Site available at **127.0.0.1:8000/**
+
+For Instructors login and course creation use this URL:
+[http://127.0.0.1:8000/accounts/login/?next=/course/mine/](http://127.0.0.1:8000/accounts/login/?next=/course/mine/)
