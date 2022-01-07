@@ -1,5 +1,5 @@
-[![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
-[![Django Version](https://img.shields.io/badge/django-2.2.1-brightgreen.svg)](https://djangoproject.com)
+[![Python Version](https://img.shields.io/badge/python-3.9-brightgreen.svg)](https://python.org)
+[![Django Version](https://img.shields.io/badge/django-4.0.1-brightgreen.svg)](https://djangoproject.com)
 
 # Django CMS, Online Courses
 
