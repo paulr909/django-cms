@@ -5,22 +5,19 @@
 
 ## Django 4.0.1
 
-Run your app in a Virtual Environment: http://python-guide-ru.readthedocs.io/en/latest/dev/virtualenvs.html
+Run your app in a Virtual Environment: [http://python-guide-ru.readthedocs.io/en/latest/dev/virtualenvs.html](http://python-guide-ru.readthedocs.io/en/latest/dev/virtualenvs.html)
 
 Install the requirements:
-
 ```bash
 pip install -r requirements.txt
 ```
 
 Run the development server:
-
 ```bash
 python manage.py runserver
 ```
 
 Run Memcached:
-
 ```bash
 memcached -l 127.0.0.1:11211
 ```
