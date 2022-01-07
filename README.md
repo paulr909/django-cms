@@ -3,7 +3,7 @@
 
 # Django CMS, Online Courses
 
-## Django 2.2.1(LTS)
+## Django 4.0.1
 
 Run your app in a Virtual Environment: http://python-guide-ru.readthedocs.io/en/latest/dev/virtualenvs.html
 
