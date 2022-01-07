@@ -1,12 +1,14 @@
+asgiref==3.4.1
 black==21.12b0
 certifi==2021.10.8
 chardet==4.0.0
 charset-normalizer==2.0.10
 click==8.0.3
+crispy-bootstrap5==0.6
 Django==4.0.1
 django-braces==1.15.0
 django-crispy-forms==1.13.0
-django-embed-video==1.4.0
+django-embed-video==1.4.1
 django-memcache-status==2.2
 djangorestframework==3.13.1
 idna==3.3
